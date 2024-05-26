@@ -10,6 +10,7 @@
 
     --second-color: rgb(77, 195, 199);
     --first-color-hover: rgb(212, 100, 40);
+
 }
 
 *{
@@ -18,8 +19,6 @@
     box-sizing: border-box;
     font-family: roboto;
 }
-
-
 .btn{
     font-weight: 500;
     padding: 12px 20px;
@@ -113,12 +112,11 @@ nav{
     left: 50%;
     bottom: -15px;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 3px;
+    width: 7px;
+    height: 7px;
     background: var(--first-color);
-    border-radius: 10px;
+    border-radius: 50%;
 }
-
 .wrapper{
     padding-inline: 10vw;
 }
@@ -343,3 +341,137 @@ nav{
 .scroll-btn i{
     font-size: 20px;
 }
+
+.section{
+    padding-block: 5em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+}
+
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 100;
+    font-size: 50px;
+    color: var(--text-color-second);
+    margin-bottom: 10px;
+}
+.top-header span{
+    color: #999;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--body-color);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
+}
+.about-info h3{
+    color: var(--text-color-second);
+}
+.about-info p{
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-color-second);
+}
+.readmore{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    top: 0;
+    z-index: 101;
+    position: fixed;
+    animation: fadein 0.25s linear;
+    display: none;
+}
+.readmore.fadein{
+    display: block;
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.readmore p{
+    background: var(--body-color);
+    width: 50%;
+    padding: 70px 50px 40px 50px;
+    border-radius: 15px;
+    color: var(--text-color-second);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.305);
+    position: relative;
+    animation: imgFloat2 7s ease-in-out infinite;
+    left: 25%;
+    top: 5%;
+}
+.readmore p i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.readmore p i:hover{
+    background: rgba(0, 0, 0, 0.106);
+}
+.about-btn button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn button:hover{
+    background: var(--first-color-hover);
+}
+
+.skills-box{
+    margin: 10px;
+}
+.skills-header{
+    margin-bottom: 30px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.skills-list span{
+    font-size: 14px;
+    background: var(--first-color);
+    color: var(--color-white);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
