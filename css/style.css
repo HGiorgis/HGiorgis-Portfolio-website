@@ -10,7 +10,6 @@
 
     --second-color: rgb(77, 195, 199);
     --first-color-hover: rgb(212, 100, 40);
-
 }
 
 *{
@@ -19,6 +18,7 @@
     box-sizing: border-box;
     font-family: roboto;
 }
+
 .btn{
     font-weight: 500;
     padding: 12px 20px;
@@ -35,7 +35,6 @@
     background: var(--second-color);
     color: var(--color-white);
 }
-
 
 i{
     font-size: 16px;
@@ -117,6 +116,7 @@ nav{
     background: var(--first-color);
     border-radius: 50%;
 }
+
 .wrapper{
     padding-inline: 10vw;
 }
@@ -475,3 +475,87 @@ h3{
     border-radius: 5px;
 }
 
+.project-container{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 250px 20px;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 18px;
+    background: var(--body-color);
+    color:var(--text-color-second);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.491);
+    font-family: roboto;
+    text-align: justify;
+    cursor: pointer;
+    margin:10px 20px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+  }
+  .js-tilt-glare {
+    border-radius: 18px;
+  }
+  .card-image {
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .card-text {
+    grid-area: text;
+    margin: 25px 25px 0 25px;
+    transform: translateZ(30px);
+  }
+  .card-text .date {
+    color: rgb(255, 7, 110);
+    font-size:13px;
+  }
+  .card-text p {
+    color: grey;
+    font-size:14px;
+    font-weight: 300;
+  }
+  .card-text h2 {
+    margin-top:0px;
+    font-size:20px;
+  }
+.windows{
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/win.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.android{
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/and.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.encrypt{
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/img3.jpg);
+    background-size: cover;
+  background-position: center;
+}
+.event{
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color)97%),url(../images/img3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.fpf{
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/img3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.tgr{
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/img3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.card .skills-list span{
+    margin-top: 25px;
+    background: rgb(47, 164, 187);
+}
