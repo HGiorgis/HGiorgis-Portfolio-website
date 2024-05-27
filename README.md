@@ -17,11 +17,17 @@
 ## :star2: About the Project
 
 ### :camera: Screenshots
+<h5>HOME SECTION</h5>
 <div align="center"> <a href=""><img src="https://i.ibb.co/gtsCrhG/home.png" alt='image' width='800'/></a> </div>
+ <h5>ABOUT SECTION</h5>
 <div align="center"> <a href=""><img src="https://i.ibb.co/NjrkTgV/about.png" alt='image' width='800'/></a> </div>
+<h5>PROJECTS SECTION</h5> 
 <div align="center"> <a href=""><img src="https://i.ibb.co/PCH2S1Z/projects.png" alt='image' width='800'/></a> </div>
+<h5>CONTACT SECTION</h5> 
 <div align="center"> <a href=""><img src="https://i.ibb.co/ZGCCD3G/contact.png" alt='image' width='800'/></a> </div>
+<h5>DARK MODE</h5> 
 <div align="center"> <a href=""><img src="https://i.ibb.co/gFhcS6M/dark.png" alt='image' width='800'/></a> </div>
+<div align = "center" > <h5></h5> </div>
 <div align="center"> <a href=""><img src="https://i.ibb.co/rwpmCQy/darkprojects.png" alt='image' width='800'/></a> </div>
 
 
