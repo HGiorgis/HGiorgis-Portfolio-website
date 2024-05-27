@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Portfolio Website| H-Giorgis</title>
+    <title>Portfolio Website | H-Giorgis</title>
 </head>
 <body>
     
    <div class="container">
+    <a href="#home" class="up-arrow"><i class="fa-solid fa-arrow-up"></i></a>
       <nav id="header">
         <div class="nav-logo">
             <p class="nav-name">HGiorgis</p>
@@ -37,8 +37,9 @@
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn">Download CV <i class="fa-light fa-file-pdf"></i></button>
+            <a href="images/cv.pdf"><button class="btn">Download CV <i class="fa-light fa-file-pdf"></i></button></a>
         </div>
+        <div class="toggle"></div>
         <div class="nav-menu-btn">
             <i class="fa-light fa-bars" onclick="myMenuFunction()"></i>
         </div>
@@ -54,22 +55,22 @@
                 <span>Hailegiorgis Wagaye</span>
             </div>
             <div class="featured-name">
-                <p>I'm <span class="typedText">Web Developer</span></p>
+                <p>Skilled With <span class="typedText"></span></p>
             </div>
             <div class="featured-text-info">
-                <p>Experienced frontend developer with a passion for creating visually stunning
+                <p>Experienced Web developer with a passion for creating working, visually stunning
                    and user-friendly websites.
                 </p>
             </div>
             <div class="featured-text-btn">
-                <button class="btn blue-btn">Hire Me</button>
-                <button class="btn">Download CV <i class="fa-light fa-file-pdf"></i></button>
+                <a href="#contact"><button class="btn blue-btn">Hire Me</button></a>
+                <a href="images/cv.pdf"><button class="btn">Download CV <i class="fa-light fa-file-pdf"></i></button></a>
             </div>
             <div class="social_icons">
-                <div class="icon"><i class="fa-brands fa-upwork"></i></div>
-                <div class="icon"><i class="fa-brands fa-youtube"></i></div>
-                <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
-                <div class="icon"><i class="fa-brands fa-github"></i></i></div>
+                <a href="https://www.youtube.com/@GiorgisArt"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a>
+                <a href="https://t.me/H_Giorgis"><div class="icon"><i class="fa-brands fa-telegram"></i></div></a>
+                <a href="#"><div class="icon"><i class="fa-brands fa-linkedin"></i></div></a>
+                <a href="https://github.com/HGiorgis"><div class="icon"><i class="fa-brands fa-github"></i></i></div></a>
             </div>
           </div>
           <div class="featured-image">
@@ -282,15 +283,39 @@
             <p>Hailegiorgis Wagaye .</p>
         </div>
         <div class="footer-social-icons">
-            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-            <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
-            <div class="icon"><i class="fa-brands fa-dribbble"></i></div>
-            <div class="icon"><i class="fa-brands fa-github"></i></div>
+            <a href="https://www.youtube.com/@GiorgisArt"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a>
+            <a href="#"><div class="icon"><i class="fa-brands fa-linkedin"></i></div></a>
+            <a href="https://t.me/H_Giorgis"><div class="icon"><i class="fa-brands fa-telegram"></i></div></a>
+            <a href="https://github.com/HGiorgis"><div class="icon"><i class="fa-brands fa-github"></i></div></a>
         </div>
         <div class="bottom-footer">
             <p>Copyright &copy; <a href="#home" style="text-decoration: none;">HGiorgis</a> - All rights reserved</p>
         </div>
     </footer>
     </div>
+
+    <div class="readmore" id="aboutme">
+        
+        <p><i class="fa-light fa-close" onclick="readless()"></i>
+            Hello and welcome to my portfolio! I am a passionate Front-End and 
+            Back-End Web Developer with a diverse skill set. I have a strong 
+            foundation in HTML, CSS, and JavaScript, allowing me to create visually 
+            appealing and interactive websites. I am also my skilled in utilizing 
+            MySQL and PHP for back-end development. Furthermore, I am familiar with 
+            the Tailwind CSS framework, which enables me to efficiently create responsive 
+            and stylish user interfaces. For further to Know me contact me. Thank you</p>
+    </div>
+
+
+    
+    <script src="js/script.js"></script>
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+          glare: true,
+          reverse: true,
+          "max-glare": 0.15
+        });
+      </script>
 </body>
 </html>

@@ -19,6 +19,25 @@
     font-family: roboto;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #787878;
+}
 
 .btn{
     font-weight: 500;
@@ -51,7 +70,23 @@ body{
     width: 100%;
     position: relative;
 }
-
+.up-arrow{
+    position: absolute;
+    bottom: 0;
+    z-index: 110;
+    left: 0;
+    background: var(--body-color);
+    border: 2px solid var(--text-color-second);
+    padding: 10px 15px;
+    border-radius: 50%;
+    color: var(--text-color-second);
+    margin: 20px;
+    position: fixed;    
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.up-arrow:hover{
+    background: var(--second-color);
+}
 
 nav{
     position: fixed;
@@ -114,14 +149,47 @@ nav{
     left: 50%;
     bottom: -15px;
     transform: translate(-50%, -50%);
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 5px;
     background: var(--first-color);
     border-radius: 50%;
 }
+.toggle{
+    width: 40px;
+    height: 5px;
+    border-radius: 50px;
+    margin-top:40px;
+    background: var(--text-color-second);
+    box-shadow: 0 1px 10px rgba(32, 41, 54, 0.082);
+    position: relative;
+}
+.toggle::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--body-color);
+    border: 3px solid var(--text-color-second);
+    transition: 0.5s;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.toggle.active::before{
+    left: 50%;
+}
+
+
+
+
 .wrapper{
     padding-inline: 10vw;
 }
+
+
+
 
 .featured-box{
     position: relative;
@@ -129,6 +197,10 @@ nav{
     height: 100vh;
     min-height: 700px;
 }
+
+
+
+
 
 .featured-text{
     position: relative;
@@ -142,13 +214,13 @@ nav{
 }
 .featured-text-card span{
     background: var(--third-color);
-    color: var(--color-white);
+    color: var(--text-color-second);
     padding: 3px 8px;
     font-size: 17px;
     border-radius: 5px;
 }
 .featured-name{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
@@ -156,7 +228,14 @@ nav{
 .typedText{
     text-transform: capitalize;
     color: var(--text-color-third);
-}
+    overflow: hidden;
+    border-right: 0.15em solid var(--text-color-second);
+    animation: blink-bar 1s infinite;
+  }
+
+  @keyframes blink-bar {
+    50% { border-color: transparent; }
+  }
 .featured-text-info{
     font-size: 15px;
     margin-bottom: 30px;
@@ -179,6 +258,10 @@ nav{
     gap: 30px;
 
 }
+
+.social_icons a{
+    text-decoration: none;
+}
 .icon{
     display: flex;
     justify-content: center;
@@ -194,6 +277,10 @@ nav{
 .icon:hover{
     color: var(--first-color);
 }
+
+
+
+
 
 .featured-image{
     display: flex;
@@ -343,7 +430,6 @@ nav{
 .scroll-btn i{
     font-size: 20px;
 }
-
 .section{
     padding-block: 5em;
 }
@@ -425,15 +511,15 @@ h3{
 }
 .readmore p{
     background: var(--body-color);
-    width: 50%;
+    width: 40%;
     padding: 70px 50px 40px 50px;
     border-radius: 15px;
     color: var(--text-color-second);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.305);
     position: relative;
     animation: imgFloat2 7s ease-in-out infinite;
-    left: 25%;
-    top: 5%;
+    left: 35%;
+    top: 25%;
 }
 .readmore p i{
     position: absolute;
@@ -457,7 +543,6 @@ h3{
 .about-btn button:hover{
     background: var(--first-color-hover);
 }
-
 
 .skills-box{
     margin: 10px;
@@ -539,22 +624,22 @@ h3{
     background-position: center;
 }
 .encrypt{
-    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/img3.jpg);
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/encrypt.jpg);
     background-size: cover;
   background-position: center;
 }
 .event{
-    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color)97%),url(../images/img3.jpg);
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color)97%),url(../images/event.jpg);
     background-size: cover;
     background-position: center;
 }
 .fpf{
-    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/img3.jpg);
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/password.jpg);
     background-size: cover;
     background-position: center;
 }
 .tgr{
-    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/img3.jpg);
+    background: linear-gradient(#fff0 0%, #fff0 90%, var(--body-color) 97%),url(../images/tg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -562,7 +647,6 @@ h3{
     margin-top: 25px;
     background: rgb(47, 164, 187);
 }
-
 
 .contact-info{
     position: relative;    
@@ -668,28 +752,33 @@ footer{
     display: flex;
     gap: 30px;   
 }
+.footer-social-icons a{
+    text-decoration: none;
+}
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
 }
-
-
-
-
-
 
 @media only screen and (max-width: 1024px){
     .featured-text{
         padding: 0;
     }
     .nav-link{
-        margin-inline: 10px;
+        margin-inline: 0;
     }
     .image, .image #personal{
         width: 350px;
         height: 350px;
+    }.readmore p{
+        width: 55%;
+        left: 25%;
     }
 }
+
+
+
+
 
 @media only screen and (max-width: 900px) {
     .nav-button{
@@ -781,10 +870,12 @@ footer{
     }
     .project-box{
         width: 80%;
+    }.readmore p{
+        width: 65%;
+        left: 20%;
     }
 
 }
-
 @media only screen and (max-width: 540px){
     .featured-name{
         font-size: 40px;
@@ -797,5 +888,7 @@ footer{
     }
     .input-field{
         width: 100%;
+    }.readmore p{
+        width: 75%;
     }
 }
